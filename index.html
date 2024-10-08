@@ -34,11 +34,11 @@
             padding: 0; 
         }
 
-        /* Footer setup (bottom right, static, always visible) */
+        /* Static footer (bottom, spans full width) */
         .footer {
             position: fixed;
             bottom: 0;
-            right: 0;
+            left: 0;
             width: 100%;
             background-color: #ffc4d4;
             padding: 10px;
@@ -46,6 +46,7 @@
             justify-content: space-around;
             align-items: center;
             box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+            z-index: 999; /* Ensure footer stays on top */
         }
 
         .footer-icon img {
@@ -53,51 +54,40 @@
             height: 40px; 
         }
 
-        .footer-icon {
-            opacity: 1;
-        }
-
-        /* Left hover icons section */
-        .left-hover-icons {
+        /* Right icons setup (fixed at the bottom-right, always visible) */
+        .right-icons {
             position: fixed;
-            bottom: 20px;
-            left: 20px;
+            bottom: 80px; /* Adjusted so it stays above the footer */
+            right: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: flex-end;
             background-color: rgba(255, 196, 212, 0.7); /* Light pink background */
             padding: 5px;
             border-radius: 10px;
+            z-index: 1000; /* Ensures it is above most elements */
         }
 
-        .left-icon {
+        .right-icon {
             margin: 5px 0;
-            opacity: 0.8;
-            transform: translateX(-60px);
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        /* Show icons on hover */
-        .left-hover-icons:hover .left-icon {
             opacity: 1;
-            transform: translateX(0);
         }
 
-        .left-icon img {
-            width: 30px; 
-            height: 30px; 
+        .right-icon img {
+            width: 40px; 
+            height: 40px; 
             transition: background-color 0.3s ease;
         }
 
-        .left-icon:hover img {
+        .right-icon:hover img {
             background-color: #ffc4d4; /* Pink hover background */
             border-radius: 50%;
             padding: 5px;
         }
 
         /* Remove text decoration and keep layout clean */
-        .footer-icon a, .left-icon a {
+        .footer-icon a, .right-icon a {
             display: block;
             color: inherit;
             text-decoration: none;
@@ -105,7 +95,7 @@
 
         /* Media query to keep the layout strictly for mobile devices */
         @media screen and (max-width: 600px) {
-            .footer-icon img, .left-icon img {
+            .footer-icon img, .right-icon img {
                 width: 35px;
                 height: 35px;
             }
@@ -114,9 +104,9 @@
                 padding: 5px;
             }
 
-            .left-hover-icons {
-                left: 10px;
-                bottom: 10px;
+            .right-icons {
+                right: 10px;
+                bottom: 90px; /* Adjusted so it stays above the footer */
             }
         }
     </style>
@@ -137,7 +127,7 @@
     <img src="Catalog/11.png" alt="Macrame Cords Pari Contact">
     <img src="Catalog/12.png" alt="Macrame Cords Pari About">
 
-    <!-- Static footer section (bottom right, always visible) -->
+    <!-- Static footer section (spans the bottom, always visible) -->
     <div class="footer">
         <div class="footer-icon">
             <a href="https://www.instagram.com/macrame_cords_pari" target="_blank">
@@ -145,7 +135,7 @@
             </a>
         </div>
         <div class="footer-icon">
-            <a href="tel:+91 7500456456">
+            <a href="https://wa.me/917500456456">
                 <img src="Logos/Whatsapp.png" alt="WhatsApp Icon">
             </a>
         </div>
@@ -166,19 +156,29 @@
         </div>
     </div>
 
-    <!-- Left hover section with icons -->
-    <div class="left-hover-icons">
-        <div class="left-icon">
+    <!-- Fixed right section with icons (bottom right, always visible) -->
+    <div class="right-icons">
+        <div class="right-icon">
             <a href="https://www.instagram.com/macrame_cords_pari" target="_blank">
                 <img src="Logos/Instagram.png" alt="Instagram Icon">
             </a>
         </div>
-        <div class="left-icon">
-            <a href="tel:+91 7500456456">
+        <div class="right-icon">
+            <a href="https://wa.me/917500456456">
                 <img src="Logos/Whatsapp.png" alt="WhatsApp Icon">
             </a>
         </div>
-        <div class="left-icon">
+        <div class="right-icon">
+            <a href="https://youtube.com/@macramecordspari" target="_blank">
+                <img src="Logos/Youtube.png" alt="YouTube Icon">
+            </a>
+        </div>
+        <div class="right-icon">
+            <a href="https://www.linkedin.com/company/macrame-cords-pari/" target="_blank">
+                <img src="Logos/Linkedin.png" alt="LinkedIn Icon">
+            </a>
+        </div>
+        <div class="right-icon">
             <a href="http://macramecordspari.in/" target="_blank">
                 <img src="Logos/Web.png" alt="Web Icon">
             </a>
