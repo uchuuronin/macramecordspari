@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Responsive Image with Side Hover Footer</title>
+    <title>Responsive Image with Side Hover Footer and Left Icons</title>
     <style>
         /* General mobile-only setup */
         body {
@@ -34,7 +34,7 @@
             padding: 0; 
         }
 
-        /* Side hover footer setup */
+        /* Side hover footer setup (bottom right) */
         .footer {
             position: fixed;
             bottom: 20px;
@@ -50,7 +50,7 @@
             opacity: 0.8;
         }
 
-        /* Hidden by default, show on hover */
+        /* Hidden by default, show on hover (right footer) */
         .footer:hover .footer-icon {
             opacity: 1;
             transform: translateX(0);
@@ -62,7 +62,6 @@
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
-        /* Hide icons initially by translating them off-screen */
         .footer-icon {
             transform: translateX(60px);
             transition: transform 0.3s ease, opacity 0.3s ease;
@@ -72,14 +71,39 @@
             opacity: 1;
         }
 
-        /* Icons Styling */
-        .footer-icon img {
-            width: 40px; 
-            height: 40px; 
+        /* Small icon hover section in lower left */
+        .left-hover-icons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-color: rgba(255, 196, 212, 0.7); /* Light pink background */
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .left-icon {
+            margin: 5px 0;
+            opacity: 1;
+        }
+
+        .left-icon img {
+            width: 30px; 
+            height: 30px; 
+            transition: background-color 0.3s ease;
+        }
+
+        .left-icon:hover img {
+            background-color: #ffc4d4; /* Pink hover background */
+            border-radius: 50%;
+            padding: 5px;
         }
 
         /* Remove text decoration and keep layout clean */
-        .footer-icon a {
+        .footer-icon a, .left-icon a {
             display: block;
             color: inherit;
             text-decoration: none;
@@ -87,13 +111,18 @@
 
         /* Media query to keep the layout strictly for mobile devices */
         @media screen and (max-width: 600px) {
-            .footer-icon img {
+            .footer-icon img, .left-icon img {
                 width: 40px;
                 height: 40px;
             }
 
             .footer {
                 right: 10px;
+                bottom: 10px;
+            }
+
+            .left-hover-icons {
+                left: 10px;
                 bottom: 10px;
             }
         }
@@ -115,7 +144,7 @@
     <img src="Catalog/11.png" alt="Macrame Cords Pari Contact">
     <img src="Catalog/12.png" alt="Macrame Cords Pari About">
 
-    <!-- Footer section with hover effect icons -->
+    <!-- Footer section with hover effect icons (bottom right) -->
     <div class="footer">
         <div class="footer-icon">
             <a href="https://www.instagram.com/macrame_cords_pari" target="_blank">
@@ -138,6 +167,35 @@
             </a>
         </div>
         <div class="footer-icon">
+            <a href="http://macramecordspari.in/" target="_blank">
+                <img src="Logos/Web.png" alt="Web Icon">
+            </a>
+        </div>
+    </div>
+
+    <!-- Left hover section with icons (always visible) -->
+    <div class="left-hover-icons">
+        <div class="left-icon">
+            <a href="https://www.instagram.com/macrame_cords_pari" target="_blank">
+                <img src="Logos/Instagram.png" alt="Instagram Icon">
+            </a>
+        </div>
+        <div class="left-icon">
+            <a href="tel:+91 7500456456">
+                <img src="Logos/Whatsapp.png" alt="WhatsApp Icon">
+            </a>
+        </div>
+        <div class="left-icon">
+            <a href="https://youtube.com/@macramecordspari" target="_blank">
+                <img src="Logos/Youtube.png" alt="YouTube Icon">
+            </a>
+        </div>
+        <div class="left-icon">
+            <a href="https://www.linkedin.com/company/macrame-cords-pari/" target="_blank">
+                <img src="Logos/Linkedin.png" alt="LinkedIn Icon">
+            </a>
+        </div>
+        <div class="left-icon">
             <a href="http://macramecordspari.in/" target="_blank">
                 <img src="Logos/Web.png" alt="Web Icon">
             </a>
