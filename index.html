@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Responsive Image with Footer</title>
+    <title>Responsive Image with Side Hover Footer</title>
     <style>
-        /* Set the background color of the page and remove side margins */
+        /* General mobile-only setup */
         body {
             margin: 0;
             padding: 0;
@@ -16,54 +16,92 @@
             align-items: flex-start; 
             flex-direction: column;
             min-height: 100vh; 
-            width: 100vw;
             overflow-x: hidden; 
         }
 
-        /* Ensure the images are responsive and fill the screen width */
-        img {
-            max-width: 100vw; 
-            height: auto;
-            display: block;
-            margin: 0; 
-            padding: 0;
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
-        .footer {
-            background-color: #ffc4d4;
-            padding: 10px;
+        /* Ensure full-width images */
+        img {
             width: 100%;
-            box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.1);
+            height: auto;
+            display: block;
+            margin: 0;
+            padding: 0; 
+        }
+
+        /* Side hover footer setup */
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: auto;
-            border-radius: 20px 20px 0 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
         }
 
         .footer-icon {
-            display: flex;
-            justify-content: center;
+            margin: 5px 0;
+            opacity: 0.8;
         }
 
-        /* Icons Styling for mobile */
+        /* Hidden by default, show on hover */
+        .footer:hover .footer-icon {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
         .footer-icon img {
-            width: 30px; 
-            height: 30px; 
+            width: 50px; 
+            height: 50px; 
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
-        /* Ensure links are styled appropriately */
+        /* Hide icons initially by translating them off-screen */
+        .footer-icon {
+            transform: translateX(60px);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .footer-icon:hover {
+            opacity: 1;
+        }
+
+        /* Icons Styling */
+        .footer-icon img {
+            width: 40px; 
+            height: 40px; 
+        }
+
+        /* Remove text decoration and keep layout clean */
         .footer-icon a {
+            display: block;
+            color: inherit;
             text-decoration: none;
         }
 
-        .footer-icon a:hover {
-            opacity: 0.8; /* Simple hover effect for icons */
+        /* Media query to keep the layout strictly for mobile devices */
+        @media screen and (max-width: 600px) {
+            .footer-icon img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .footer {
+                right: 10px;
+                bottom: 10px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Images displayed on the full width of the phone -->
     <img src="Catalog/1.png" alt="Macrame Cords Pari Catalogue">
     <img src="Catalog/2.png" alt="Macrame Cords Pari Introduction">
     <img src="Catalog/3.png" alt="Macrame Cords Pari Twisted Cords">
@@ -77,6 +115,7 @@
     <img src="Catalog/11.png" alt="Macrame Cords Pari Contact">
     <img src="Catalog/12.png" alt="Macrame Cords Pari About">
 
+    <!-- Footer section with hover effect icons -->
     <div class="footer">
         <div class="footer-icon">
             <a href="https://www.instagram.com/macrame_cords_pari" target="_blank">
