@@ -13,9 +13,9 @@
             background-color: #b79c87;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; 
             flex-direction: column;
-            height: 100vh;
+            min-height: 100vh; 
         }
 
         /* Responsive image styling */
@@ -24,6 +24,7 @@
             height: auto;
             display: block;
             margin: 0 auto;
+            padding: 0px 0; 
         }
 
         /* Footer section styling */
@@ -33,9 +34,9 @@
             padding: 20px;
             width: 100%;
             box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.1);
-            margin-top: auto;
+            margin-top: auto; 
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
             align-items: center;
             border-radius: 20px 20px 0 0;
             transform: translateY(20px);
@@ -45,20 +46,22 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.2em;
+            font-size: 1em; 
             color: #333;
             text-decoration: none;
+            flex-direction: column;
         }
 
         /* Icons Styling */
         .footer-icon img {
-            width: 30px;
-            height: 30px;
+            width: 40px; 
+            height: 40px; 
         }
 
         .footer-icon a {
             text-decoration: none;
             color: #333;
+            text-align: center; /* Center text below icons */
         }
 
         /* Hover effects */
@@ -91,8 +94,8 @@
             <img src="Logos/Whatsapp.png" alt="WhatsApp Icon">
             <a href="tel:+91 7500456456">+91 7500456456</a>
         </div>
-        <div class="footer-icon"></div>
-            <img src="Logos/Youtube.png" alt="YT Icon">
+        <div class="footer-icon">
+            <img src="Logos/Youtube.png" alt="YouTube Icon">
             <a href="https://youtube.com/@macramecordspari" target="_blank">YT</a>
         </div>
         <div class="footer-icon">
