@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Responsive Image with Side Hover Footer and Left Icons</title>
+    <title>Macrame Cords Pari Catalog</title>
     <style>
         /* General mobile-only setup */
         body {
@@ -34,44 +34,30 @@
             padding: 0; 
         }
 
-        /* Side hover footer setup (bottom right) */
+        /* Footer setup (bottom right, static, always visible) */
         .footer {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            background-color: #ffc4d4;
+            padding: 10px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-        }
-
-        .footer-icon {
-            margin: 5px 0;
-            opacity: 0.8;
-        }
-
-        /* Hidden by default, show on hover (right footer) */
-        .footer:hover .footer-icon {
-            opacity: 1;
-            transform: translateX(0);
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
         }
 
         .footer-icon img {
-            width: 50px; 
-            height: 50px; 
-            transition: transform 0.3s ease, opacity 0.3s ease;
+            width: 40px; 
+            height: 40px; 
         }
 
         .footer-icon {
-            transform: translateX(60px);
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        .footer-icon:hover {
             opacity: 1;
         }
 
-        /* Small icon hover section in lower left */
+        /* Left hover icons section */
         .left-hover-icons {
             position: fixed;
             bottom: 20px;
@@ -87,7 +73,15 @@
 
         .left-icon {
             margin: 5px 0;
+            opacity: 0.8;
+            transform: translateX(-60px);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Show icons on hover */
+        .left-hover-icons:hover .left-icon {
             opacity: 1;
+            transform: translateX(0);
         }
 
         .left-icon img {
@@ -112,13 +106,12 @@
         /* Media query to keep the layout strictly for mobile devices */
         @media screen and (max-width: 600px) {
             .footer-icon img, .left-icon img {
-                width: 40px;
-                height: 40px;
+                width: 35px;
+                height: 35px;
             }
 
             .footer {
-                right: 10px;
-                bottom: 10px;
+                padding: 5px;
             }
 
             .left-hover-icons {
@@ -144,7 +137,7 @@
     <img src="Catalog/11.png" alt="Macrame Cords Pari Contact">
     <img src="Catalog/12.png" alt="Macrame Cords Pari About">
 
-    <!-- Footer section with hover effect icons (bottom right) -->
+    <!-- Static footer section (bottom right, always visible) -->
     <div class="footer">
         <div class="footer-icon">
             <a href="https://www.instagram.com/macrame_cords_pari" target="_blank">
@@ -173,7 +166,7 @@
         </div>
     </div>
 
-    <!-- Left hover section with icons (always visible) -->
+    <!-- Left hover section with icons -->
     <div class="left-hover-icons">
         <div class="left-icon">
             <a href="https://www.instagram.com/macrame_cords_pari" target="_blank">
@@ -183,16 +176,6 @@
         <div class="left-icon">
             <a href="tel:+91 7500456456">
                 <img src="Logos/Whatsapp.png" alt="WhatsApp Icon">
-            </a>
-        </div>
-        <div class="left-icon">
-            <a href="https://youtube.com/@macramecordspari" target="_blank">
-                <img src="Logos/Youtube.png" alt="YouTube Icon">
-            </a>
-        </div>
-        <div class="left-icon">
-            <a href="https://www.linkedin.com/company/macrame-cords-pari/" target="_blank">
-                <img src="Logos/Linkedin.png" alt="LinkedIn Icon">
             </a>
         </div>
         <div class="left-icon">
