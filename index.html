@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Responsive Image with Footer</title>
+    <style>
+        /* Set the background color of the page */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #b79c87;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Responsive image styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Footer section styling */
+        .footer {
+            position: relative;
+            background-color: #ffc4d4;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 20px 20px 0 0;
+            transform: translateY(20px);
+        }
+
+        .footer-icon {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2em;
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Icons Styling */
+        .footer-icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-icon a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Hover effects */
+        .footer-icon a:hover {
+            color: #ff4081; 
+        }
+    </style>
+</head>
+<body>
+
+    <img src="Catalog/1.png" alt="Macrame Cords Pari Catalogue">
+    <img src="Catalog/2.png" alt="Macrame Cords Pari Introduction">
+    <img src="Catalog/3.png" alt="Macrame Cords Pari Twisted Cords">
+    <img src="Catalog/4.png" alt="Macrame Cords Pari Single Strand">
+    <img src="Catalog/5.png" alt="Macrame Cords Pari Braided Cords">
+    <img src="Catalog/6.png" alt="Macrame Cords Pari Other">
+    <img src="Catalog/7.png" alt="Macrame Cords Pari Variation">
+    <img src="Catalog/8.png" alt="Macrame Cords Pari Colour Chart">
+    <img src="Catalog/9.png" alt="Macrame Cords Pari Order">
+    <img src="Catalog/10.png" alt="Macrame Cords Pari Delivery">
+    <img src="Catalog/11.png" alt="Macrame Cords Pari Contact">
+    <img src="Catalog/12.png" alt="Macrame Cords Pari About">
+
+    <div class="footer">
+        <div class="footer-icon">
+            <img src="Logos/Instagram.png" alt="Instagram Icon">
+            <a href="https://www.instagram.com/macrame_cords_pari" target="_blank">@macrame_cords_pari</a>
+        </div>
+        <div class="footer-icon">
+            <img src="Logos/Whatsapp.png" alt="WhatsApp Icon">
+            <a href="tel:+91 7500456456">+91 7500456456</a>
+        </div>
+        <div class="footer-icon"></div>
+            <img src="Logos/Youtube.png" alt="LinkedIn Icon">
+            <a href="https://youtube.com/@macramecordspari" target="_blank">YT</a>
+        </div>
+        <div class="footer-icon">
+            <img src="Logos/Linkedin.png" alt="LinkedIn Icon">
+            <a href="https://www.linkedin.com/company/macrame-cords-pari/" target="_blank">LinkedIn</a>
+        </div>
+        <div class="footer-icon">
+            <img src="Logos/Web.png" alt="Web Icon">
+            <a href="http://macramecordspari.in/" target="_blank">macramecordspari.in</a>
+        </div>
+    </div>
+
+</body>
+</html>
