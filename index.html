@@ -34,19 +34,15 @@
             padding: 0; 
         }
 
-        /* Static footer (bottom, spans full width) */
+        /* Footer setup (appears at the end of the page) */
         .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
             background-color: #ffc4d4;
             padding: 10px;
             display: flex;
             justify-content: space-around;
             align-items: center;
             box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
-            z-index: 999; /* Ensure footer stays on top */
+            width: 100%;
         }
 
         .footer-icon img {
@@ -57,7 +53,7 @@
         /* Right icons setup (fixed at the bottom-right, always visible) */
         .right-icons {
             position: fixed;
-            bottom: 80px; /* Adjusted so it stays above the footer */
+            bottom: 20px;
             right: 20px;
             display: flex;
             flex-direction: column;
@@ -106,7 +102,7 @@
 
             .right-icons {
                 right: 10px;
-                bottom: 90px; /* Adjusted so it stays above the footer */
+                bottom: 10px;
             }
         }
     </style>
@@ -126,35 +122,6 @@
     <img src="Catalog/10.png" alt="Macrame Cords Pari Delivery">
     <img src="Catalog/11.png" alt="Macrame Cords Pari Contact">
     <img src="Catalog/12.png" alt="Macrame Cords Pari About">
-
-    <!-- Static footer section (spans the bottom, always visible) -->
-    <div class="footer">
-        <div class="footer-icon">
-            <a href="https://www.instagram.com/macrame_cords_pari" target="_blank">
-                <img src="Logos/Instagram.png" alt="Instagram Icon">
-            </a>
-        </div>
-        <div class="footer-icon">
-            <a href="https://wa.me/917500456456">
-                <img src="Logos/Whatsapp.png" alt="WhatsApp Icon">
-            </a>
-        </div>
-        <div class="footer-icon">
-            <a href="https://youtube.com/@macramecordspari" target="_blank">
-                <img src="Logos/Youtube.png" alt="YouTube Icon">
-            </a>
-        </div>
-        <div class="footer-icon">
-            <a href="https://www.linkedin.com/company/macrame-cords-pari/" target="_blank">
-                <img src="Logos/Linkedin.png" alt="LinkedIn Icon">
-            </a>
-        </div>
-        <div class="footer-icon">
-            <a href="http://macramecordspari.in/" target="_blank">
-                <img src="Logos/Web.png" alt="Web Icon">
-            </a>
-        </div>
-    </div>
 
     <!-- Fixed right section with icons (bottom right, always visible) -->
     <div class="right-icons">
@@ -179,6 +146,35 @@
             </a>
         </div>
         <div class="right-icon">
+            <a href="http://macramecordspari.in/" target="_blank">
+                <img src="Logos/Web.png" alt="Web Icon">
+            </a>
+        </div>
+    </div>
+
+    <!-- Static footer section (at the bottom of the page) -->
+    <div class="footer">
+        <div class="footer-icon">
+            <a href="https://www.instagram.com/macrame_cords_pari" target="_blank">
+                <img src="Logos/Instagram.png" alt="Instagram Icon">
+            </a>
+        </div>
+        <div class="footer-icon">
+            <a href="https://wa.me/917500456456">
+                <img src="Logos/Whatsapp.png" alt="WhatsApp Icon">
+            </a>
+        </div>
+        <div class="footer-icon">
+            <a href="https://youtube.com/@macramecordspari" target="_blank">
+                <img src="Logos/Youtube.png" alt="YouTube Icon">
+            </a>
+        </div>
+        <div class="footer-icon">
+            <a href="https://www.linkedin.com/company/macrame-cords-pari/" target="_blank">
+                <img src="Logos/Linkedin.png" alt="LinkedIn Icon">
+            </a>
+        </div>
+        <div class="footer-icon">
             <a href="http://macramecordspari.in/" target="_blank">
                 <img src="Logos/Web.png" alt="Web Icon">
             </a>
